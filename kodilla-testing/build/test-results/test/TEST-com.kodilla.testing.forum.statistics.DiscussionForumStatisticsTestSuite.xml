@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-05-29T18:33:35" hostname="Joanna" time="0.127">
+  <properties/>
+  <testcase name="moreCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.122"/>
+  <testcase name="testZeroComments" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.0"/>
+  <testcase name="morePostsThanComments" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.0"/>
+  <testcase name="testZeroPosts" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.001"/>
+  <testcase name="testZeroUsers" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.0"/>
+  <testcase name="testManyPosts" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.0"/>
+  <testcase name="testManyUsers" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.001"/>
+  <system-out><![CDATA[This is the beginning of tests.
+Preparing to execute test #1
+Preparing to execute test #2
+Preparing to execute test #3
+Preparing to execute test #4
+Preparing to execute test #5
+Preparing to execute test #6
+Preparing to execute test #7
+All tests are finished.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
