@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
-import java.time.Period;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -151,14 +151,14 @@ public class BoardTestSuite {
         long sumOfDays = project.getTaskLists().stream()
                 .filter(inProgressTask::contains)
                 .flatMap(t2->t2.getTasks().stream())
-                .mapToLong( s->Period.between(s.getCreated(), LocalDate.now()).getDays()).sum();
+                .mapToLong( s->ChronoUnit.DAYS.between(s.getCreated(), LocalDate.now())).sum();
 
         long averageTime1 = sumOfDays/tasksNumber;
 
         double averageTime = project.getTaskLists().stream()
                 .filter(inProgressTask::contains)
                 .flatMap(t2->t2.getTasks().stream())
-                .mapToLong( s->Period.between(s.getCreated(), LocalDate.now()).getDays())
+                .mapToLong( s->ChronoUnit.DAYS.between(s.getCreated(), LocalDate.now()))
                 .average().orElse(0);
         //Then
         Assert.assertEquals(3,tasksNumber);
