@@ -1,27 +1,31 @@
 package com.kodilla.challenges;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+public class MovieStore {
 
-public final class MovieStore {
+    public Map<String, List<String>> getMovies() {
 
-    Movie movie1 = new Movie("IM","Żelazny Człowiek");
-    Movie movie2 = new Movie("IM","Iron Man");
-    Movie movie3 = new Movie("AV","Mściciele");
-    Movie movie4 = new Movie("AV","Avengers");
-    Movie movie5 = new Movie("FL","Błyskawica");
-    Movie movie6 = new Movie("FL", "Flash");
+    List<String> ironManTranslations = new ArrayList<>();
+    ironManTranslations.add("Żelazny Człowiek");
+    ironManTranslations.add("Iron Man");
 
-    public final List<Movie> getMovies() {
+    List<String> avengersTranslations = new ArrayList<>();
+    avengersTranslations.add("Mściciele");
+    avengersTranslations.add("Avengers");
 
-        List<Movie> books = new ArrayList<>();
-        books.add(movie1);
-        books.add(movie2);
-        books.add(movie3);
-        books.add(movie4);
-        books.add(movie5);
-        books.add(movie6);
-        return books;
+    List<String> flashTranslations = new ArrayList<>();
+    flashTranslations.add("Błyskawica");
+    flashTranslations.add("Flash");
+
+    Map<String, List<String>> booksTitlesWithTranslations = new HashMap<>();
+    booksTitlesWithTranslations.put("IM", ironManTranslations);
+    booksTitlesWithTranslations.put("AV", avengersTranslations);
+    booksTitlesWithTranslations.put("FL", flashTranslations);
+
+    return booksTitlesWithTranslations;
     }
 }
