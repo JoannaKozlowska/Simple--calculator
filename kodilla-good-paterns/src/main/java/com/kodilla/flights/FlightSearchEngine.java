@@ -1,52 +1,26 @@
 package com.kodilla.flights;
 
-import java.util.Objects;
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 public class FlightSearchEngine {
-    private String airportOfDeparture;
-    private String airportOfArrival;
-    private String interchangeAirport;
 
-    public FlightSearchEngine(String airportOfDeparture, String airportOfArrival, String interchangeAirport) {
-        this.airportOfDeparture = airportOfDeparture;
-        this.airportOfArrival = airportOfArrival;
-        this.interchangeAirport = interchangeAirport;
+    public List<Flight> findFlightsFrom (String departureAirport) {
+        List<Flight> departure = FlightsDB.getList().stream().filter(flight -> flight.getDepartureAirport()
+                .equals(departureAirport)).collect(Collectors.toList());
+        return departure;
     }
-
-    public String getAirportOfDeparture() {
-        return airportOfDeparture;
+    public List<Flight> findFlightsTo(String arrivalAirport) {
+        List<Flight> arrival = FlightsDB.getList().stream().filter(flight -> flight.getArrivalAirport()
+                .equals(arrivalAirport)).collect(Collectors.toList());
+        return arrival;
     }
-
-    public String getAirportOfArrival() {
-        return airportOfArrival;
-    }
-
-    public String getInterchangeAirport() {
-        return interchangeAirport;
-    }
-
-    @Override
-    public String toString() {
-        return "FlightSearchEngine{" +
-                "airportOfDeparture='" + airportOfDeparture + '\'' +
-                ", airportOfArrival='" + airportOfArrival + '\'' +
-                ", interchangeAirport='" + interchangeAirport + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        FlightSearchEngine that = (FlightSearchEngine) o;
-        return Objects.equals(airportOfDeparture, that.airportOfDeparture) &&
-                Objects.equals(airportOfArrival, that.airportOfArrival) &&
-                Objects.equals(interchangeAirport, that.interchangeAirport);
-    }
-
-    @Override
-    public int hashCode() {
-
-        return Objects.hash(airportOfDeparture, airportOfArrival, interchangeAirport);
+    public List<Flight> findFlightsVia(String departureAirport, String viaAirport, String arrivalAirport){
+        List<Flight> flightsVia = FlightsDB.getList().stream()
+                .filter(flight -> flight.getDepartureAirport().equals(departureAirport)&&flight.getArrivalAirport()
+                .equals(viaAirport)).filter(flight -> flight.getDepartureAirport()
+                .equals(viaAirport)&& flight.getArrivalAirport().equals(arrivalAirport)).collect(Collectors.toList());
+        return flightsVia;
     }
 }

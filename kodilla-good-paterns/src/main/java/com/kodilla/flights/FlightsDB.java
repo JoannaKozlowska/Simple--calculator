@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class FlightsDB {
-    public final List<Flight> flights = new ArrayList<>();
+    public static final List<Flight> flights = new ArrayList<>();
     public FlightsDB(){
         List<Flight> flights = new ArrayList<>();
         flights.add(new Flight("Warsaw","Krakow"));
@@ -15,7 +15,7 @@ public final class FlightsDB {
         flights.add(new Flight("Warsaw", "Berlin"));
     }
 
-    public List<Flight> getList() {
+    public static List<Flight> getList() {
         return new ArrayList<>(flights);
     }
 }
