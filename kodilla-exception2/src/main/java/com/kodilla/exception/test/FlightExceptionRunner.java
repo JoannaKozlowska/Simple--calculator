@@ -10,7 +10,7 @@ public class FlightExceptionRunner {
         FlightSearchEngine flightSearchEngine = new FlightSearchEngine();
         try {
             flightSearchEngine.findFlight(flight4);
-        } catch (RouteNotFindException e){
+        } catch (RouteNotFindException e) {
             System.out.println("This flight isn't possible. Error: " + e);
         }
     }

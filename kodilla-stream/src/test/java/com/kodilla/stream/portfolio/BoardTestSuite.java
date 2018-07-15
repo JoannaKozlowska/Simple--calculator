@@ -118,6 +118,7 @@ public class BoardTestSuite {
         Assert.assertEquals(1, tasks.size());
         Assert.assertEquals("HQLs for analysis", tasks.get(0).getTitle());
     }
+
     @Test
     public void testAddTaskListFindLongTasks() {
         //Given
@@ -136,12 +137,13 @@ public class BoardTestSuite {
         //Then
         Assert.assertEquals(2, longTasks);
     }
+
     @Test
-    public void testAddTaskListAverageWorkingOnTask(){
+    public void testAddTaskListAverageWorkingOnTask() {
         //Given
         Board project = prepareTestData();
         //When
-        List<TaskList>inProgressTask = new ArrayList<>();
+        List<TaskList> inProgressTask = new ArrayList<>();
         inProgressTask.add(new TaskList("In progress"));
         long tasksNumber = project.getTaskLists().stream()
                 .filter(inProgressTask::contains)
@@ -150,20 +152,20 @@ public class BoardTestSuite {
 
         long sumOfDays = project.getTaskLists().stream()
                 .filter(inProgressTask::contains)
-                .flatMap(t2->t2.getTasks().stream())
-                .mapToLong( s->ChronoUnit.DAYS.between(s.getCreated(), LocalDate.now())).sum();
+                .flatMap(t2 -> t2.getTasks().stream())
+                .mapToLong(s -> ChronoUnit.DAYS.between(s.getCreated(), LocalDate.now())).sum();
 
-        long averageTime1 = sumOfDays/tasksNumber;
+        long averageTime1 = sumOfDays / tasksNumber;
 
         double averageTime = project.getTaskLists().stream()
                 .filter(inProgressTask::contains)
-                .flatMap(t2->t2.getTasks().stream())
-                .mapToLong( s->ChronoUnit.DAYS.between(s.getCreated(), LocalDate.now()))
+                .flatMap(t2 -> t2.getTasks().stream())
+                .mapToLong(s -> ChronoUnit.DAYS.between(s.getCreated(), LocalDate.now()))
                 .average().orElse(0);
         //Then
-        Assert.assertEquals(3,tasksNumber);
+        Assert.assertEquals(3, tasksNumber);
         Assert.assertEquals(30, sumOfDays);
-        Assert.assertEquals(10, averageTime,0.001);
+        Assert.assertEquals(10, averageTime, 0.001);
         Assert.assertEquals(10, averageTime1);
     }
 }

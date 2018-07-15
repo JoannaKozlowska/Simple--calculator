@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
@@ -11,12 +12,13 @@ import static org.mockito.Mockito.*;
 public class BookDirectoryTestSuite {
     private List<Book> generateListOfNBooks(int booksQuantity) {
         List<Book> resultList = new ArrayList<Book>();
-        for(int n = 1; n <= booksQuantity; n++){
+        for (int n = 1; n <= booksQuantity; n++) {
             Book theBook = new Book("Title " + n, "Author " + n, 1970 + n);
             resultList.add(theBook);
         }
         return resultList;
     }
+
     @Test
     public void testListBooksWithConditionsReturnList() {
         // Given
@@ -37,6 +39,7 @@ public class BookDirectoryTestSuite {
         // Then
         assertEquals(4, theListOfBooks.size());
     }
+
     @Test
     public void testListBooksWithConditionMoreThan20() {
         // Given
@@ -57,9 +60,10 @@ public class BookDirectoryTestSuite {
         assertEquals(15, theListOfBooks15.size());
         assertEquals(0, theListOfBooks40.size());
     }
+
     @Test
     public void testListBooksWithConditionFragmentShorterThan3() {
-       // Given
+        // Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         List<Book> resultListOf10Books = generateListOfNBooks(10);
@@ -70,6 +74,7 @@ public class BookDirectoryTestSuite {
         assertEquals(0, theListOfBooks10.size());
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
     }
+
     @Test
     public void testUserHasZeroBooks() {
         //Given
@@ -82,8 +87,9 @@ public class BookDirectoryTestSuite {
         List<Book> theListOfBorrowedBooks0 = bookLibrary.listBooksInHandsOf(libraryUser);
         //Then
         assertEquals(0, theListOfBorrowedBooks0.size());
-        verify(libraryDatabaseMock,times(1)).listBooksInHandsOf(libraryUser);
+        verify(libraryDatabaseMock, times(1)).listBooksInHandsOf(libraryUser);
     }
+
     @Test
     public void testUserHasOneBook() {
         //Given
@@ -96,8 +102,9 @@ public class BookDirectoryTestSuite {
         List<Book> theListOfBorrowedBooks1 = bookLibrary.listBooksInHandsOf(libraryUser);
         //Then
         assertEquals(1, theListOfBorrowedBooks1.size());
-        verify(libraryDatabaseMock,times(1)).listBooksInHandsOf(libraryUser);
+        verify(libraryDatabaseMock, times(1)).listBooksInHandsOf(libraryUser);
     }
+
     @Test
     public void testUserHasFiveBooks() {
         //Given
@@ -110,7 +117,7 @@ public class BookDirectoryTestSuite {
         List<Book> theListOfBorrowedBooks5 = bookLibrary.listBooksInHandsOf(libraryUser);
         //Then
         assertEquals(5, theListOfBorrowedBooks5.size());
-        verify(libraryDatabaseMock,times(1)).listBooksInHandsOf(libraryUser);
+        verify(libraryDatabaseMock, times(1)).listBooksInHandsOf(libraryUser);
     }
 
 }

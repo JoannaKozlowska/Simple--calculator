@@ -5,14 +5,16 @@ import java.util.List;
 import java.util.Objects;
 
 public final class World {
-    private final List<Continent>continents;
+    private final List<Continent> continents;
 
     public World(final List<Continent> continents) {
         this.continents = continents;
     }
+
     public List<Continent> getContinents() {
         return continents;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -20,11 +22,13 @@ public final class World {
         World world = (World) o;
         return Objects.equals(continents, world.continents);
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(continents);
     }
-    public BigDecimal getPeopleQuantity(){
+
+    public BigDecimal getPeopleQuantity() {
         return continents.stream().
                 flatMap(continent -> continent.getCountries().stream())
                 .map(Country::getPeopleQuantity)

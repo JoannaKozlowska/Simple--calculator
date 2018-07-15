@@ -15,43 +15,50 @@ public class ForumUser {
         //real name of the user
         this.realName = realName;
     }
-    public void addPost(String author, String postBody){
+
+    public void addPost(String author, String postBody) {
         // method done
         ForumPost thePost = new ForumPost(postBody, author);
         posts.add(thePost);
     }
-    public void addComment(ForumPost thePost, String author, String commentBody){
+
+    public void addComment(ForumPost thePost, String author, String commentBody) {
         //method done
         ForumComment theComment = new ForumComment(thePost, commentBody, author);
-       comments.add(theComment);
+        comments.add(theComment);
     }
-    public int getPostsQuantity(){
+
+    public int getPostsQuantity() {
         // method done
         return posts.size();
     }
-    public int getCommentsQuantity(){
+
+    public int getCommentsQuantity() {
         // method done
         return comments.size();
     }
-    public ForumPost getPost(int postNumber){
+
+    public ForumPost getPost(int postNumber) {
         // returning null means that the operation was unsuccessful
         //method done
         ForumPost thePost = null;
-        if(postNumber >= 0 && postNumber < posts.size()){
+        if (postNumber >= 0 && postNumber < posts.size()) {
             thePost = posts.get(postNumber);
         }
         return thePost;
     }
-    public ForumComment getComment(int commentNumber){
+
+    public ForumComment getComment(int commentNumber) {
         // returning null means that the operation was unsuccessful
         //method done
         ForumComment theComment = null;
-        if(commentNumber >= 0 && commentNumber < comments.size()){
+        if (commentNumber >= 0 && commentNumber < comments.size()) {
             theComment = comments.get(commentNumber);
         }
         return theComment;
     }
-    public boolean removePost(ForumPost thePost){
+
+    public boolean removePost(ForumPost thePost) {
         // method done
         boolean result = false;
         if (posts.contains(thePost)) {
@@ -60,18 +67,21 @@ public class ForumUser {
         }
         return result;
     }
-    public boolean removeComment(ForumComment theComment){
+
+    public boolean removeComment(ForumComment theComment) {
         // method done
         boolean result = false;
-        if (comments.contains(theComment)){
+        if (comments.contains(theComment)) {
             comments.remove(theComment);
             result = true;
         }
         return result;
     }
+
     public String getName() {
         return name;
     }
+
     public String getRealName() {
         return realName;
     }

@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class FlightsDB {
-  public static List<Flight> getList(){
+    public static List<Flight> getList() {
         List<Flight> flights = new ArrayList<>();
-        flights.add(new Flight("Warsaw","Krakow"));
+        flights.add(new Flight("Warsaw", "Krakow"));
         flights.add(new Flight("Krakow", "Berlin"));
         flights.add(new Flight("Krakow", "New York"));
         flights.add(new Flight("Krakow", "Katowice"));

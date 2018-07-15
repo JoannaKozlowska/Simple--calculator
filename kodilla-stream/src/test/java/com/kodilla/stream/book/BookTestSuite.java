@@ -17,13 +17,14 @@ public class BookTestSuite {
 
         //Then
         int numberOfBooksPublicatedAfter2007 = 0;
-        for(Book book : books) {
+        for (Book book : books) {
             if (book.getYearOfPublication() > 2007) {
                 numberOfBooksPublicatedAfter2007++;
             }
         }
         Assert.assertEquals(3, numberOfBooksPublicatedAfter2007);
     }
+
     @Test
     public void testGetListUsingIntStream() {
         //Given

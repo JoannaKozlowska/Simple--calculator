@@ -18,21 +18,27 @@ public final class ForumUser {
         this.birthDate = LocalDate.of(yearOfBirth, monthOfBirth, dayOfBirth);
         this.postsNumber = postsNumber;
     }
+
     public int getUserID() {
         return userID;
     }
+
     public String getUserName() {
         return userName;
     }
+
     public char getSex() {
         return sex;
     }
+
     public LocalDate getBirthDate() {
         return birthDate;
     }
+
     public int getPostsNumber() {
         return postsNumber;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -44,11 +50,13 @@ public final class ForumUser {
                 Objects.equals(userName, forumUser.userName) &&
                 Objects.equals(birthDate, forumUser.birthDate);
     }
+
     @Override
     public int hashCode() {
 
         return Objects.hash(userID, userName, sex, birthDate, postsNumber);
     }
+
     @Override
     public String toString() {
         return "ForumUser{" +

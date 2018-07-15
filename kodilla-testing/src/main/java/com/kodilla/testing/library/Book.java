@@ -12,15 +12,19 @@ public class Book {
         this.author = author;
         this.publicationYear = publicationYear;
     }
+
     public String getTitle() {
         return title;
     }
+
     public String getAuthor() {
         return author;
     }
+
     public int getPublicationYear() {
         return publicationYear;
     }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -29,6 +33,7 @@ public class Book {
                 ", publicationYear=" + publicationYear +
                 '}';
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -38,6 +43,7 @@ public class Book {
                 Objects.equals(title, book.title) &&
                 Objects.equals(author, book.author);
     }
+
     @Override
     public int hashCode() {
 

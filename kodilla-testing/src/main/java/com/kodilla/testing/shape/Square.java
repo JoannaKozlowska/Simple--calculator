@@ -3,18 +3,21 @@ package com.kodilla.testing.shape;
 import java.util.Objects;
 
 public class Square implements Shape {
-double width;
+    double width;
 
     public Square(double width) {
         this.width = width;
     }
+
     @Override
     public String getShapeName() {
         return "square";
     }
+
     public double getWidth() {
         return width;
     }
+
     @Override
     public double getField() {
         return width * width;

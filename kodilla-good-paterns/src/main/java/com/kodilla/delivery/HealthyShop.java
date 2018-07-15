@@ -16,7 +16,7 @@ public class HealthyShop implements ProducerService {
         if (listOfProducts.contains(deliveryRequest.getProductName())) {
             System.out.println(deliveryRequest.getProductName() + "  is available in shop");
             System.out.println(" Price is: " +
-                    (deliveryRequest.getPricePerProduct()* deliveryRequest.getQuantityOfProduct()));
+                    (deliveryRequest.getPricePerProduct() * deliveryRequest.getQuantityOfProduct()));
             return true;
         } else {
             System.out.println(deliveryRequest.getProductName() + " isn't available in the shop");

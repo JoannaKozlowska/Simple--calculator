@@ -9,21 +9,25 @@ public class ShapeCollector {
     public void addFigure(Shape shape) {
         figures.add(shape);
     }
+
     public boolean removeFigure(Shape shapeToRemove) {
-           return figures.remove(shapeToRemove);
+        return figures.remove(shapeToRemove);
     }
-    public Shape getFigure(int n){
-            Shape shape = null;
-            if (n >= 0 && n < figures.size()) {
-                shape = figures.get(n);
-            }
-            return shape;
+
+    public Shape getFigure(int n) {
+        Shape shape = null;
+        if (n >= 0 && n < figures.size()) {
+            shape = figures.get(n);
+        }
+        return shape;
     }
+
     public void showFigures() {
         for (Shape m : figures) {
             System.out.println(m);
         }
     }
+
     public int getShapeQuantity() {
 
         return figures.size();

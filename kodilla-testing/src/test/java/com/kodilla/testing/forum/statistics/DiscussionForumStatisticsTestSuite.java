@@ -26,6 +26,7 @@ public class DiscussionForumStatisticsTestSuite {
         testCounter++;
         System.out.println("Preparing to execute test #" + testCounter);
     }
+
     @Test
     public void testZeroPosts() {
         //Given
@@ -37,6 +38,7 @@ public class DiscussionForumStatisticsTestSuite {
         //Then
         Assert.assertEquals(0, newForum.getQuantityOfPosts());
     }
+
     @Test
     public void testManyPosts() {
         //Given
@@ -48,8 +50,9 @@ public class DiscussionForumStatisticsTestSuite {
         //Then
         Assert.assertEquals(1000, newForum.getQuantityOfPosts());
     }
+
     @Test
-    public void testZeroUsers(){
+    public void testZeroUsers() {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         List<String> theList1 = new ArrayList<>();
@@ -60,8 +63,9 @@ public class DiscussionForumStatisticsTestSuite {
         //Then
         Assert.assertEquals(0, newForum.getNumbersOfUsers());
     }
+
     @Test
-    public void testZeroComments(){
+    public void testZeroComments() {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         DiscussionForumStatistics newForum = new DiscussionForumStatistics(statisticsMock);
@@ -76,17 +80,18 @@ public class DiscussionForumStatisticsTestSuite {
         //Then
         Assert.assertEquals(2, newForum.getNumbersOfUsers());
         Assert.assertEquals(10, newForum.getQuantityOfPosts());
-        Assert.assertEquals(5, newForum.getAveragePostsForUser(),0.001);
+        Assert.assertEquals(5, newForum.getAveragePostsForUser(), 0.001);
         Assert.assertEquals(0, newForum.getAverageCommentsForUser(), 0.001);
     }
+
     @Test
-    public void testManyUsers(){
+    public void testManyUsers() {
         Statistics statisticsMock = mock(Statistics.class);
         DiscussionForumStatistics newForum = new DiscussionForumStatistics(statisticsMock);
         List<String> theList1 = new ArrayList<>();
         String name = "Asia Kozlowska";
-        for (int n = 0; n < 100; n++){
-            theList1.add(name + " "+ n);
+        for (int n = 0; n < 100; n++) {
+            theList1.add(name + " " + n);
         }
         when(statisticsMock.usersNames()).thenReturn(theList1);
         //When
@@ -94,6 +99,7 @@ public class DiscussionForumStatisticsTestSuite {
         //Then
         Assert.assertEquals(100, newForum.getNumbersOfUsers());
     }
+
     @Test
     public void moreCommentsThanPosts() {
         Statistics statisticsMock = mock(Statistics.class);
@@ -102,10 +108,11 @@ public class DiscussionForumStatisticsTestSuite {
         when(statisticsMock.commentsCount()).thenReturn(20);
         //When
         newForum.calculateAdvStatistics();
-        boolean result = newForum.getAverageCommentsforPost()>1;
+        boolean result = newForum.getAverageCommentsforPost() > 1;
         //Then
         Assert.assertTrue(result);
     }
+
     @Test
     public void morePostsThanComments() {
         Statistics statisticsMock = mock(Statistics.class);
@@ -114,7 +121,7 @@ public class DiscussionForumStatisticsTestSuite {
         when(statisticsMock.commentsCount()).thenReturn(10);
         //When
         newForum.calculateAdvStatistics();
-        boolean result = newForum.getAverageCommentsforPost()<1;
+        boolean result = newForum.getAverageCommentsforPost() < 1;
         //Then
         Assert.assertTrue(result);
     }

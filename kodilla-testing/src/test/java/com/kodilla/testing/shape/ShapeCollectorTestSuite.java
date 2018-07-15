@@ -21,8 +21,9 @@ public class ShapeCollectorTestSuite {
         testCounter++;
         System.out.println("Preparing to execute test #" + testCounter);
     }
+
     @Test
-    public void testAddShape(){
+    public void testAddShape() {
         //given
         Shape circle = new Circle(2.0);
         Shape square = new Square(3.0);
@@ -33,10 +34,11 @@ public class ShapeCollectorTestSuite {
         //then
         Assert.assertEquals(2, collector.getShapeQuantity());
     }
+
     @Test
-    public void testRemoveShape(){
+    public void testRemoveShape() {
         //given
-        Circle circle = new Circle( 2.0);
+        Circle circle = new Circle(2.0);
         ShapeCollector collector = new ShapeCollector();
         //when
         collector.addFigure(circle);
@@ -44,10 +46,11 @@ public class ShapeCollectorTestSuite {
         //then
         Assert.assertTrue(result);
     }
+
     @Test
-    public void testGetShape(){
+    public void testGetShape() {
         //given
-        Shape circle = new Circle( 2.0);
+        Shape circle = new Circle(2.0);
         ShapeCollector collector = new ShapeCollector();
         collector.addFigure(circle);
         //when
@@ -55,6 +58,7 @@ public class ShapeCollectorTestSuite {
         //then
         Assert.assertEquals(circle, retrievedFigure);
     }
+
     @Test
     public void testRemoveNotExistingShape() {
         //given
@@ -65,8 +69,9 @@ public class ShapeCollectorTestSuite {
         //then
         Assert.assertFalse(result);
     }
+
     @Test
-    public void testGetShapeName(){
+    public void testGetShapeName() {
         //given
         Shape square = new Square(2);
         ShapeCollector collector = new ShapeCollector();
@@ -76,6 +81,7 @@ public class ShapeCollectorTestSuite {
         //then
         Assert.assertEquals("square", result);
     }
+
     @Test
     public void testGetShapeField() {
         //given
@@ -85,6 +91,6 @@ public class ShapeCollectorTestSuite {
         //when
         double result = collector.getFigure(0).getField();
         //then
-        Assert.assertEquals(4, result,0.001);
+        Assert.assertEquals(4, result, 0.001);
     }
 }

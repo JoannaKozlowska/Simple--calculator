@@ -9,7 +9,7 @@ import java.util.List;
 
 public class WorldTestSuite {
     @Test
-    public void testGetPeopleQuantity(){
+    public void testGetPeopleQuantity() {
         //Given
         //Create countries
         List<Country> asiaCountries = new ArrayList<>();
@@ -22,16 +22,16 @@ public class WorldTestSuite {
         asiaCountries.add(country1);
         asiaCountries.add(country2);
 
-        List<Country>northAmericaCountries = new ArrayList<>();
+        List<Country> northAmericaCountries = new ArrayList<>();
         northAmericaCountries.add(country3);
         northAmericaCountries.add(country4);
 
-        List<Country>europeCountries = new ArrayList<>();
+        List<Country> europeCountries = new ArrayList<>();
         europeCountries.add(country5);
         //Create continents
-        List<Continent>continents = new ArrayList<>();
+        List<Continent> continents = new ArrayList<>();
         Continent continent1 = new Continent("Asia", asiaCountries);
-        Continent continent2 = new Continent("North America",northAmericaCountries);
+        Continent continent2 = new Continent("North America", northAmericaCountries);
         Continent continent3 = new Continent("Europe", europeCountries);
 
         continents.add(continent1);

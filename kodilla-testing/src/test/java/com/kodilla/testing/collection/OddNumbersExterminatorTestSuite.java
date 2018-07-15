@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class OddNumbersExterminatorTestSuite {
     @Test
-    public void testExterminateEmptyList(){
+    public void testExterminateEmptyList() {
         //given
         ArrayList<Integer> numbers = new ArrayList<>();
         OddNumbersExterminator oe = new OddNumbersExterminator();
@@ -20,15 +20,16 @@ public class OddNumbersExterminatorTestSuite {
         //then
         Assert.assertEquals(0, resultList.size());
     }
+
     @Test
-    public void testExterminateFullList(){
+    public void testExterminateFullList() {
         //given
         ArrayList<Integer> numbers = new ArrayList<>();
         Random theGenerator = new Random();
         int counter = 0;
         for (int n = 0; n < 20; n++) {
             int number = theGenerator.nextInt(20);
-            if(number%2 ==0){
+            if (number % 2 == 0) {
                 counter++;
             }
             numbers.add(number);
@@ -40,8 +41,8 @@ public class OddNumbersExterminatorTestSuite {
 
         //then
         Assert.assertEquals(counter, resultList.size());
-        for(int m: resultList) {
-            Assert.assertEquals(0, m%2);
+        for (int m : resultList) {
+            Assert.assertEquals(0, m % 2);
         }
     }
 }

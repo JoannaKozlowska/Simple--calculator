@@ -16,24 +16,31 @@ public final class ForumUser {
         this.realName = realName;
         this.location = location;
     }
-    public boolean addFriend(ForumUser user){
+
+    public boolean addFriend(ForumUser user) {
         return friends.add(user);
     }
+
     public boolean removeFriend(ForumUser user) {
         return friends.remove(user);
     }
+
     public String getUserName() {
         return userName;
     }
+
     public String getRealName() {
         return realName;
     }
+
     public String getLocation() {
         return location;
     }
+
     public Set<ForumUser> getFriends() {
         return friends;
     }
+
     @Override
     public String toString() {
         return "ForumUser{" +
@@ -42,6 +49,7 @@ public final class ForumUser {
                 ", location='" + location + '\'' +
                 '}';
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -49,16 +57,19 @@ public final class ForumUser {
         ForumUser forumUser = (ForumUser) o;
         return Objects.equals(userName, forumUser.userName);
     }
+
     @Override
     public int hashCode() {
 
         return Objects.hash(userName);
     }
+
     public Set<String> getLocationsOfFriends() {
         return friends.stream()
                 .map(friend -> friend.getLocation())
                 .collect(Collectors.toSet());
     }
+
     public Set<String> getLocationsOfFriendsOfFriends() {
         return friends.stream()
                 .flatMap(user -> user.getFriends().stream())

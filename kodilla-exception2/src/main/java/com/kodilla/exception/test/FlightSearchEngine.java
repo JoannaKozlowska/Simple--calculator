@@ -24,6 +24,6 @@ public class FlightSearchEngine {
                         + " to " + flight.getArrivalAirport());
             }
         }
-       return flights;
+        return flights;
     }
 }
