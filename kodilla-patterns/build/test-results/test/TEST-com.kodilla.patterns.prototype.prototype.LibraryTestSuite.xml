@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.prototype.prototype.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-07-30T16:22:45" hostname="Joanna" time="0.037">
+  <properties/>
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.prototype.LibraryTestSuite" time="0.037"/>
+  <system-out><![CDATA[Book [Literature]
+Book [ title = Outsider, author = 'Stephen King', publicationDate = 2002-02-05]
+
+Book [ title = Still Me, author = 'Jojo Moyes', publicationDate = 2017-04-15]
+
+Book [Literature 2]
+Book [ title = Outsider, author = 'Stephen King', publicationDate = 2002-02-05]
+
+Book [ title = Still Me, author = 'Jojo Moyes', publicationDate = 2017-04-15]
+
+Book [Literature 3]
+Book [ title = Outsider, author = 'Stephen King', publicationDate = 2002-02-05]
+
+Book [ title = Still Me, author = 'Jojo Moyes', publicationDate = 2017-04-15]
+
+Book [ title = Behind closed door, author = 'B.A. Paris', publicationDate = 2018-06-20]
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

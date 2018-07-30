@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.factory.ShapeFactoryTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-07-30T16:22:45" hostname="Joanna" time="0.012">
+  <properties/>
+  <testcase name="testFactoryCircle" classname="com.kodilla.patterns.factory.ShapeFactoryTestSuite" time="0.01"/>
+  <testcase name="testFactorySquare" classname="com.kodilla.patterns.factory.ShapeFactoryTestSuite" time="0.001"/>
+  <testcase name="testFactoryRectangle" classname="com.kodilla.patterns.factory.ShapeFactoryTestSuite" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
