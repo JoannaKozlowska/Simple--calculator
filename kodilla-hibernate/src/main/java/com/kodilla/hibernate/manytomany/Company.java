@@ -4,7 +4,11 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-
+@NamedNativeQuery(
+        name = "Company.findByFirstThreeLetters",
+        query = "SELECT COMPANY_ID, COMPANY_NAME from COMPANIES where COMPANY_NAME like 'Sof%'",
+        resultClass = Company.class
+)
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
