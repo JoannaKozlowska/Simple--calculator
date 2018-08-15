@@ -114,7 +114,7 @@ public class CompanyDaoTestSuite {
         companyDao.save(softwareMachine);
         companyDao.save(dataMaesters);
         companyDao.save(greyMatter);
-        List<Company> findCompany = companyDao.findByFirstThreeLetters();
+        List<Company> findCompany = companyDao.findByFirstThreeLetters("Sof");
 
         //Then
         Assert.assertEquals(1, findCompany.size());
