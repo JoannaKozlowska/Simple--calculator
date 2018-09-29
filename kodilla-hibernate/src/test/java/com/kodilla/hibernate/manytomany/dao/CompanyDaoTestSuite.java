@@ -79,6 +79,7 @@ public class CompanyDaoTestSuite {
         stephanieClarckson.getCompanies().add(dataMaesters);
         lindaKovalsky.getCompanies().add(dataMaesters);
         lindaKovalsky.getCompanies().add(greyMatter);
+
         //When
         employeeDao.save(johnSmith);
         employeeDao.save(stephanieClarckson);

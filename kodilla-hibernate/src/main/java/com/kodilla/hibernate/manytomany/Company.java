@@ -1,5 +1,8 @@
 package com.kodilla.hibernate.manytomany;
 
+import org.hibernate.annotations.NamedNativeQuery;
+
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
@@ -10,6 +13,7 @@ import java.util.List;
                 "concat('%', concat(:COMPANY_NAME, '%')) ",
         resultClass = Company.class
 )
+
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
