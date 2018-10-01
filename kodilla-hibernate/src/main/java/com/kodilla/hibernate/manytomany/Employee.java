@@ -1,13 +1,20 @@
 package com.kodilla.hibernate.manytomany;
 
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-@NamedQuery(
-        name = "Employee.findByLastName",
-        query = "FROM Employee WHERE lastName = :LASTNAME"
-)
+@NamedQueries({
+        @NamedQuery(
+                name="Employee.findByLastName",
+                query = "FROM Employee WHERE lastName = :LASTNAME"),
+        // Nr 20
+        @NamedQuery(
+                name="Employee.findByLastNamePart",
+                query = "FROM Company WHERE name like CONCAT('%',:LAST_NAME_PART,'%')")
+        })
+
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {

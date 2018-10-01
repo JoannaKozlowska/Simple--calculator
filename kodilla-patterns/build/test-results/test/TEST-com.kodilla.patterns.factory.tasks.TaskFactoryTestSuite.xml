@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-09-28T17:03:59" hostname="Joanna" time="0.003">
+<testsuite name="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-09-29T07:06:06" hostname="Joanna" time="0.008">
   <properties/>
-  <testcase name="testCreateShoppingTask" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.002"/>
-  <testcase name="testCreateDrivingTask" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.0"/>
-  <testcase name="testCreatePaintingTask" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.001"/>
+  <testcase name="testCreateShoppingTask" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.003"/>
+  <testcase name="testCreateDrivingTask" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.002"/>
+  <testcase name="testCreatePaintingTask" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,6 +1,7 @@
 package com.kodilla.hibernate.manytomany;
 
 import org.hibernate.annotations.NamedNativeQuery;
+import org.springframework.stereotype.Service;
 
 
 import javax.persistence.*;
@@ -12,6 +13,11 @@ import java.util.List;
         query = "SELECT COMPANY_ID, COMPANY_NAME from  COMPANIES WHERE COMPANY_NAME like " +
                 "concat('%', concat(:COMPANY_NAME, '%')) ",
         resultClass = Company.class
+)
+//Nr 20
+@NamedQuery(
+        name = "Company.findByCompanyPartName",
+        query = "FROM Company WHERE name like CONCAT('%',:PART_NAME, '%')"
 )
 
 @Entity
