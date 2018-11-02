@@ -16,24 +16,24 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public class TaskListDaoTestSuite {
-//
+
 //    @Autowired
 //    private TaskListDao taskListDao;
 //
 //    @Autowired
 //    private TaskDao taskDao;
-//
+
 //    private static final String LISTNAME = "To do";
 //    private static final String DESCRIPTION = "Learning hibernate";
 
 //    @Test
-//    public void testFindByListName(){
+//    public void testFindByListName() {
 //        //Given
 //        TaskList taskList = new TaskList(LISTNAME, DESCRIPTION);
 //        taskListDao.save(taskList);
 //
 //        //When
-//        String listName =taskList.getListName();
+//        String listName = taskList.getListName();
 //        List<TaskList> readTaskList = taskListDao.findByListName(listName);
 //        //Then
 //        Assert.assertEquals(1, readTaskList.size());
@@ -41,5 +41,5 @@ public class TaskListDaoTestSuite {
 //        //CleanUp
 //        int id = readTaskList.get(0).getId();
 //        taskListDao.delete(id);
-//
+//    }
 }

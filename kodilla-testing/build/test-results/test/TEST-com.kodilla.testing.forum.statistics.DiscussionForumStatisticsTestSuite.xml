@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-09-29T07:06:30" hostname="Joanna" time="0.194">
+<testsuite name="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-11-02T21:02:11" hostname="Joanna" time="0.172">
   <properties/>
-  <testcase name="moreCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.182"/>
-  <testcase name="testZeroComments" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.002"/>
-  <testcase name="morePostsThanComments" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.002"/>
+  <testcase name="moreCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.167"/>
+  <testcase name="testZeroComments" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.001"/>
+  <testcase name="morePostsThanComments" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.0"/>
   <testcase name="testZeroPosts" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.001"/>
   <testcase name="testZeroUsers" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.001"/>
-  <testcase name="testManyPosts" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.001"/>
+  <testcase name="testManyPosts" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.0"/>
   <testcase name="testManyUsers" classname="com.kodilla.testing.forum.statistics.DiscussionForumStatisticsTestSuite" time="0.001"/>
   <system-out><![CDATA[This is the beginning of tests.
 Preparing to execute test #1
